@@ -1,0 +1,21 @@
+,Unnamed: 0,img_name,img_path,mask_path,T_Stage
+2,2,crc_268,imgTs/crc_268.nii.gz,maskTs/crc_268.nii.gz,0.0
+7,7,crc_273,imgTs/crc_273.nii.gz,maskTs/crc_273.nii.gz,1.0
+9,9,crc_275,imgTs/crc_275.nii.gz,maskTs/crc_275.nii.gz,0.0
+12,12,crc_278,imgTs/crc_278.nii.gz,maskTs/crc_278.nii.gz,0.0
+14,14,crc_280,imgTs/crc_280.nii.gz,maskTs/crc_280.nii.gz,0.0
+17,17,crc_283,imgTs/crc_283.nii.gz,maskTs/crc_283.nii.gz,1.0
+18,18,crc_284,imgTs/crc_284.nii.gz,maskTs/crc_284.nii.gz,0.0
+19,19,crc_285,imgTs/crc_285.nii.gz,maskTs/crc_285.nii.gz,1.0
+21,21,crc_287,imgTs/crc_287.nii.gz,maskTs/crc_287.nii.gz,1.0
+24,24,crc_290,imgTs/crc_290.nii.gz,maskTs/crc_290.nii.gz,0.0
+27,27,crc_293,imgTs/crc_293.nii.gz,maskTs/crc_293.nii.gz,1.0
+31,31,crc_297,imgTs/crc_297.nii.gz,maskTs/crc_297.nii.gz,0.0
+34,34,crc_300,imgTs/crc_300.nii.gz,maskTs/crc_300.nii.gz,1.0
+36,36,crc_302,imgTs/crc_302.nii.gz,maskTs/crc_302.nii.gz,0.0
+42,42,crc_308,imgTs/crc_308.nii.gz,maskTs/crc_308.nii.gz,0.0
+44,44,crc_310,imgTs/crc_310.nii.gz,maskTs/crc_310.nii.gz,1.0
+46,46,crc_312,imgTs/crc_312.nii.gz,maskTs/crc_312.nii.gz,0.0
+47,47,crc_313,imgTs/crc_313.nii.gz,maskTs/crc_313.nii.gz,0.0
+48,48,crc_314,imgTs/crc_314.nii.gz,maskTs/crc_314.nii.gz,0.0
+51,51,crc_317,imgTs/crc_317.nii.gz,maskTs/crc_317.nii.gz,1.0

@@ -1,0 +1,22 @@
+,Unnamed: 0,img_name,img_path,mask_path,T_Stage
+0,0,crc_001,imgTr/crc_001.nii.gz,maskTr/crc_001.nii.gz,0
+1,1,crc_002,imgTr/crc_002.nii.gz,maskTr/crc_002.nii.gz,0
+2,2,crc_003,imgTr/crc_003.nii.gz,maskTr/crc_003.nii.gz,0
+3,3,crc_004,imgTr/crc_004.nii.gz,maskTr/crc_004.nii.gz,0
+4,4,crc_005,imgTr/crc_005.nii.gz,maskTr/crc_005.nii.gz,0
+5,5,crc_006,imgTr/crc_006.nii.gz,maskTr/crc_006.nii.gz,1
+6,6,crc_007,imgTr/crc_007.nii.gz,maskTr/crc_007.nii.gz,0
+7,7,crc_008,imgTr/crc_008.nii.gz,maskTr/crc_008.nii.gz,1
+8,8,crc_009,imgTr/crc_009.nii.gz,maskTr/crc_009.nii.gz,0
+9,9,crc_010,imgTr/crc_010.nii.gz,maskTr/crc_010.nii.gz,1
+10,10,crc_011,imgTr/crc_011.nii.gz,maskTr/crc_011.nii.gz,1
+11,11,crc_012,imgTr/crc_012.nii.gz,maskTr/crc_012.nii.gz,1
+12,12,crc_013,imgTr/crc_013.nii.gz,maskTr/crc_013.nii.gz,0
+13,13,crc_014,imgTr/crc_014.nii.gz,maskTr/crc_014.nii.gz,1
+14,14,crc_015,imgTr/crc_015.nii.gz,maskTr/crc_015.nii.gz,1
+15,15,crc_016,imgTr/crc_016.nii.gz,maskTr/crc_016.nii.gz,1
+16,16,crc_017,imgTr/crc_017.nii.gz,maskTr/crc_017.nii.gz,0
+17,17,crc_018,imgTr/crc_018.nii.gz,maskTr/crc_018.nii.gz,0
+18,18,crc_019,imgTr/crc_019.nii.gz,maskTr/crc_019.nii.gz,0
+19,19,crc_020,imgTr/crc_020.nii.gz,maskTr/crc_020.nii.gz,1
+20,20,crc_021,imgTr/crc_021.nii.gz,maskTr/crc_021.nii.gz,1
