@@ -1,0 +1,40 @@
+# Data (ignore contents but keep .gitkeep)
+data/*
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Training artifacts
+checkpoints/
+*.pth
+*.pt
+events.out.tfevents.*
+log.*.txt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Legacy (old code preserved in master branch)
+classification/CRC_2D_Cls/
+classification/CRC_3D_Cls/

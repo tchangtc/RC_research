@@ -1,0 +1,59 @@
+# 2D Classification Configuration
+# EfficientNet-B0 based T-stage classifier
+
+# Data paths (relative to project root or absolute)
+data:
+  # 2D slices directory (prepared from segmentation output)
+  image_train_dir: data/2d/images_train
+  mask_train_dir: data/2d/masks_train
+  image_test_dir: data/2d/images_test
+  mask_test_dir: data/2d/masks_test
+  # CSV files with image-label mappings
+  train_csv: data/2d/train.csv
+  test_csv: data/2d/test.csv
+  # Subset CSVs for rectal filling analysis
+  test_csv_filling_well: data/2d/test_filling_well.csv
+  test_csv_filling_not_well: data/2d/test_filling_not_well.csv
+
+# Model
+model:
+  name: efficientnet_b0  # efficientnet_b0 | efficientnet_b2 | efficientnet_b4 | ynet2d
+  pretrained: true
+  num_classes: 1  # binary classification (T2 vs T3)
+  image_size: 256
+  input_channels: 2  # image + mask
+
+# Training
+training:
+  epochs: 600
+  batch_size: 32
+  val_batch_size: 64
+  num_workers: 8
+  seed: 982742
+  gpu: "0"
+  mixed_precision: true
+
+# Loss weights
+loss:
+  bce_weight: 0.5
+  smooth_l1_weight: 0.5
+  dice_weight: 0.0
+
+# Optimizer
+optimizer:
+  name: adam
+  lr: 1.0e-5
+  betas: [0.9, 0.99]
+  eps: 1.0e-7
+  weight_decay: 0.01
+
+# Scheduler
+scheduler:
+  name: step_lr
+  step_size: 48
+  gamma: 0.5
+
+# Output
+output:
+  save_dir: outputs/cls_2d
+  checkpoint_every: 3  # save every N epochs (skip first N)

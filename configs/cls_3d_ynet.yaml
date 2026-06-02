@@ -1,0 +1,66 @@
+# 3D Classification Configuration
+# YNet-based 3D T-stage classifier
+
+# Data paths
+data:
+  image_train_dir: data/3d/imagesTr
+  mask_train_dir: data/3d/labelsTr
+  image_test_dir: data/3d/imagesTs
+  mask_test_dir: data/3d/labelsTs
+  train_csv: data/3d/train.csv
+  test_csv: data/3d/test.csv
+  # Subset CSVs for rectal filling analysis
+  train_csv_filling_well: data/3d/train_filling_well.csv
+  test_csv_filling_well: data/3d/test_filling_well.csv
+  train_csv_filling_not_well: data/3d/train_filling_not_well.csv
+  test_csv_filling_not_well: data/3d/test_filling_not_well.csv
+
+# Model
+model:
+  name: ynet_3d  # ynet_3d
+  num_classes: 1  # binary classification (T2 vs T3)
+  image_size: 128
+  input_channels: 2  # image + mask
+
+# Preprocessing
+preprocessing:
+  target_spacing: [0.36, 0.36, 0.36]  # isotropic resampling
+  padding_size: [456, 456, 456]
+  cropping_size: [456, 456, 456]
+  center_crop_distance: [10, 25, 25]  # margin around tumor bbox (z, y, x)
+  final_size: [128, 128, 128]
+
+# Training
+training:
+  epochs: 300
+  batch_size: 8
+  val_batch_size: 8
+  num_workers: 16
+  seed: 42
+  gpu: "0"
+  mixed_precision: true
+
+# Loss weights
+loss:
+  bce_weight: 0.5
+  smooth_l1_weight: 0.5
+  dice_weight: 0.0
+
+# Optimizer
+optimizer:
+  name: adam
+  lr: 1.0e-5
+  betas: [0.9, 0.999]
+  eps: 1.0e-7
+  weight_decay: 1.0e-4
+
+# Scheduler
+scheduler:
+  name: step_lr
+  step_size: 25
+  gamma: 0.5
+
+# Output
+output:
+  save_dir: outputs/cls_3d
+  checkpoint_every: 3
