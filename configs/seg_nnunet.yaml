@@ -1,0 +1,32 @@
+# Segmentation Configuration
+# Using nnU-Net v2 for rectal tumor segmentation from T2-weighted MRI
+
+# nnU-Net dataset identifier (must be 3-digit number)
+dataset_id: 100
+dataset_name: RectalCancer
+
+# Data paths
+data:
+  raw_dir: data/raw          # Original NIfTI files
+  nnunet_dir: data/nnunet    # nnU-Net formatted data
+
+# nnU-Net settings
+nnunet:
+  # Which configurations to plan and preprocess
+  plans:
+    - 3d_fullres
+    - 3d_lowres    # optional, for comparison
+    - 2d           # optional, for comparison
+  # Trainer
+  trainer: nnUNetTrainer
+  num_processes: 8  # parallel preprocessing workers
+
+# Segmentation labels
+labels:
+  background: 0
+  tumor: 1
+
+# MRI sequence
+channel:
+  name: T2WI
+  description: "T2-weighted MRI"
