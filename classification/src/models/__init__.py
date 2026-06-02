@@ -2,7 +2,7 @@
 
 from .efficientnet_2d import EffNet
 from .ynet_2d import YNet2D, Classification2D
-from .ynet_3d import YNet3D, Classification3D
+from .ynet_3d import YNet3D, Classification3D, YNetCls3D
 
 
 def build_model(config: dict) -> object:
@@ -10,10 +10,10 @@ def build_model(config: dict) -> object:
 
     Args:
         config: dict with key 'model' containing at least 'name'.
-                Supported names: 'efficientnet_b0', 'ynet2d', 'ynet_3d'.
+                Supported names: 'efficientnet_b0/b2/b4', 'ynet2d', 'ynet_3d'.
 
     Returns:
-        Instantiated model.
+        Instantiated model with loss computation (dict input/output).
     """
     model_cfg = config.get("model", {})
     name = model_cfg.get("name", "efficientnet_b0")
@@ -24,6 +24,6 @@ def build_model(config: dict) -> object:
         return Classification2D()
     elif name == "ynet_3d":
         input_channels = model_cfg.get("input_channels", 2)
-        return Classification3D(input_channels=input_channels)
+        return YNetCls3D(input_channels=input_channels)
     else:
         raise ValueError(f"Unknown model: {name}")
